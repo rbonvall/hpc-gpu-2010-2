@@ -55,10 +55,22 @@ void gpu_map(char function_name, float x[], unsigned n) {
     block_size.x = 512;      // number of threads per block (<= 512)
     grid_size.x = n / 512;   // number of blocks
 
+    cudaEvent_t start, stop;
+    cudaEventCreate(&start);
+    cudaEventCreate(&stop);
+
+    cudaEventRecord(start, 0);
     switch (function_name) {
         case 'f': map_f<<<grid_size, block_size>>>(d_x); break;
         case 'g': map_g<<<grid_size, block_size>>>(d_x); break;
     }
+    cudaEventRecord(stop, 0);
+    cudaEventSynchronize(stop);
+
+    float time;
+    cudaEventElapsedTime(&time, start, stop);
+    cudaEventDestroy(start);
+    cudaEventDestroy(stop);
 
     cudaError_t error = cudaGetLastError();
     if (error != cudaSuccess) {
