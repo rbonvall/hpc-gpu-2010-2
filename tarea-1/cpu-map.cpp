@@ -10,7 +10,7 @@
 
 float functor_f::operator()(float x) {
     float s = 0.0;
-    for (int k = 1; k <= 100; ++k) {
+    for (int k = 1; k <= 10000; ++k) {
         s += std::sin(2 * M_PI * k * x);
     }
     return s;

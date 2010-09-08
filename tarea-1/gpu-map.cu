@@ -11,7 +11,7 @@
 
 __device__ float d_f(float x) {
     float s = 0.0;
-    for (int k = 1; k <= 100; ++k) {
+    for (int k = 1; k <= 10000; ++k) {
         s += sinf(2 * float(M_PI) * k * x);
     }
     return s;
