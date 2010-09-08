@@ -2,6 +2,7 @@
 #include <fstream>
 #include <vector>
 #include <cstdlib>
+#include <cmath>
 #include "cpu-map.hpp"
 #include "gpu-map.hpp"
 
@@ -39,5 +40,13 @@ int main(int argc, char *argv[]) {
 
     // aplicar la función f a todos los elementos de x2 en la GPU
     gpu_map('g', &x2[0], x2.size());
+
+    // verificar que los resultados son prácticamente iguales
+    float squared_diff_norm = 0.0;
+#   define SQUARED(x) ((x) * (x))
+#   pragma omp parallel reduction(+: squared_diff_norm)
+    for (unsigned i = 0; i < N; ++i)
+        squared_diff_norm += SQUARED(x1[i] - x2[i]);
+    std::cout << "Norm of the difference: " << std::sqrt(squared_diff_norm) << std::endl;
 }
 
