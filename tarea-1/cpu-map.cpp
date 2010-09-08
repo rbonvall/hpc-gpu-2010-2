@@ -26,11 +26,11 @@ float functor_g::operator()(float x) {
 template <typename FunctorType>
 void cpu_map(std::vector<float>& x) {
 
-    unsigned n = x.size();
+    int n = x.size();
     FunctorType f;
 
     #pragma omp parallel for
-    for (unsigned i = 0; i < n; ++i) {
+    for (int i = 0; i < n; ++i) {
         x[i] = f(x[i]);
     }
 
