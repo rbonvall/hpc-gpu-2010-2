@@ -49,7 +49,7 @@ void gpu_map(char function_name, float x[], unsigned n) {
      
     float *d_x;
     cudaMalloc((void **) &d_x, n * sizeof(float));
-    cudaMemcpy(x, d_x, mem_size, cudaMemcpyHostToDevice);
+    cudaMemcpy(d_x, x, mem_size, cudaMemcpyHostToDevice);
 
     dim3 grid_size, block_size;
     block_size.x = 512;      // number of threads per block (<= 512)
@@ -66,7 +66,7 @@ void gpu_map(char function_name, float x[], unsigned n) {
         exit(-1);
     }
 
-    cudaMemcpy(d_x, &x[0], mem_size, cudaMemcpyDeviceToHost);
+    cudaMemcpy(x, d_x, mem_size, cudaMemcpyDeviceToHost);
     cudaFree(d_x);
     d_x = 0;
 }
