@@ -34,18 +34,10 @@ int main(int argc, char *argv[]) {
     // uno para mapear en la GPU y otro en la CPU
     std::vector<float> x2(x1);
 
-    for (int i = 0; i < 10; ++i)
-        std::cout << x1.at(i) << " ";
-    std::cout << std::endl;
-
     // aplicar la función f a todos los elementos de x1 en la CPU
-    std::cout << "x1[0] = " << x1.at(0) << std::endl;
     cpu_map<functor_g>(x1);
-    std::cout << "f(x1[0]) = " << x1.at(0) << std::endl;
 
     // aplicar la función f a todos los elementos de x2 en la GPU
-    std::cout << "x2[0] = " << x2.at(0) << std::endl;
     gpu_map('g', &x2[0], x2.size());
-    std::cout << "f(x2[0]) = " << x2.at(0) << std::endl;
 }
 
