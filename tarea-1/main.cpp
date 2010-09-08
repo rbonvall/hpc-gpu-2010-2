@@ -7,8 +7,8 @@
 #include "gpu-map.hpp"
 
 // (1 << n) == (2 elevado a n)
-static const unsigned N = 1 << 10;
-static const char *data_file_name = "data_2e6";
+static const unsigned N = 1 << 20;
+static const char *data_file_name = "data_2^20";
 
 int main(int argc, char *argv[]) {
 
