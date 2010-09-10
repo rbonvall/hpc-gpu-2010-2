@@ -1,4 +1,4 @@
 #pragma once
 
-void gpu_map(char function_name, float x[], unsigned n);
+void gpu_map(float x[], unsigned n);
 

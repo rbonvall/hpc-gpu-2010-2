@@ -35,11 +35,9 @@ int main(int argc, char *argv[]) {
     // uno para mapear en la GPU y otro en la CPU
     std::vector<float> x2(x1);
 
-    // aplicar la función f a todos los elementos de x1 en la CPU
-    cpu_map<functor_g>(x1);
-
-    // aplicar la función f a todos los elementos de x2 en la GPU
-    gpu_map('g', &x2[0], x2.size());
+    // mapear x1 en la CPU y x2 en la GPU
+    cpu_map(x1);
+    gpu_map(&x2[0], x2.size());
 
     // verificar que los resultados son prácticamente iguales
     float squared_diff_norm = 0.0;
