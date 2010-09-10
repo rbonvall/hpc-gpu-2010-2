@@ -1,5 +1,7 @@
 #include "cpu-map.hpp"
 #include <cmath>
+#include <ctime>
+#include <iostream>
 
 /* Las funciones f y g aquí están implementadas como
  * objetos tipo función (functores). Esto tiene dos ventajas:
@@ -29,6 +31,8 @@ void cpu_map(std::vector<float>& x) {
     int n = x.size();
     FunctorType f;
 
+    clock_t start = clock();
+
     #pragma omp parallel for
     for (int i = 0; i < n; ++i) {
         x[i] = f(x[i]);
@@ -44,6 +48,11 @@ void cpu_map(std::vector<float>& x) {
      * Haga la prueba de ejecutar el ciclo con y sin paralelización, y compare
      * los tiempos de ejecución.
      */
+
+    clock_t end = clock();
+    double time = double(end - start) / CLOCKS_PER_SEC;
+
+    std::cout << time << std::endl;
 }
 
 /* Instanciaciones explícitas de la plantilla */
