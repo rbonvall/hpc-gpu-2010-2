@@ -9,10 +9,10 @@ La función es la siguiente:
 
 .. math::
 
-    f(x) = \sum_{k = 1}^N \sin(2\pi kx).
+    f(x) = \sum_{k = 1}^M \sin(2\pi kx).
 
 Para evaluar la performance del programa,
-usaremos varios valores de `N`.
+usaremos varios valores de `M`.
 
 Archivos de la tarea
 --------------------
@@ -47,7 +47,7 @@ El `código base`_ contiene los siguientes archivos:
 
 .. _código base: _static/apellido-nombre-t1.tgz
 
-El programa lee los datos de un archivo llamado ``data_2^26``
+El programa lee los datos de un archivo llamado ``data_2^{26}``
 que tiene `2^26` números ``float`` de 4 bytes cada uno.
 El programa no necesariamente los carga todos:
 la constante ``N`` indica cuántos de los datos serán leídos en el arreglo.
@@ -66,7 +66,7 @@ Qué hay que hacer
 * Hacer experimentos para estudiar cómo influye el tamaño del vector
   en la performance.
 
-* Hacer experimentos para estudiar cómo influye el valor de `N`
+* Hacer experimentos para estudiar cómo influye el valor de `M`
   (en otras palabras, el requerimiento de cómputo de la función `f`)
   en la performance.
 
