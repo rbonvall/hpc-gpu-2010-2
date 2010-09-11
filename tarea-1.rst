@@ -46,8 +46,8 @@ El `código base`_ contiene los siguientes archivos:
 
 .. _código base: _static/apellido-nombre-t1.tgz
 
-El programa lee los datos de un archivo llamado ``data_2^{26}``
-que tiene `2^26` números ``float`` de 4 bytes cada uno.
+El programa lee los datos de un archivo llamado ``data_2^26``
+que tiene `2^{26}` números ``float`` de 4 bytes cada uno.
 El programa no necesariamente los carga todos:
 la constante ``N`` indica cuántos de los datos serán leídos en el arreglo.
 Pueden generar su propio archivo de datos usando el script,
