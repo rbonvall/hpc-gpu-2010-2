@@ -37,7 +37,9 @@ El `código base`_ contiene los siguientes archivos:
   mida el tiempo
   y copie el resultado de vuelta.
 
-* ``gpu-map.hpp``, ``cpu-map.hpp``, ``Makefile``.
+* ``gpu-map.hpp``.
+* ``cpu-map.hpp``.
+* ``Makefile``: mírenlo para ver cómo se compila con ``nvcc``.
 
 * ``create_data_file.py``: script para crear el archivo de datos.
   Requiere tener Python y NumPy instalados.
