@@ -16,42 +16,42 @@ usaremos varios valores de `N`.
 
 Archivos de la tarea
 --------------------
-* El `código base`_. Contiene los siguientes archivos:
+El `código base`_ contiene los siguientes archivos:
 
-  * ``main.cpp``: carga los datos del archivo a un vector,
-    llama las funciones para mapear el arreglo
-    en la CPU y en la GPU,
-    y calcula la norma de la diferencia entre ambos resultados
-    (para verificar que entregan el mismo resultado).
+* ``main.cpp``: carga los datos del archivo a un vector,
+  llama las funciones para mapear el arreglo
+  en la CPU y en la GPU,
+  y calcula la norma de la diferencia entre ambos resultados
+  (para verificar que entregan el mismo resultado).
 
-  * ``cpu-map.cpp``:
-    mapeo del vector implementado en C++ para correr en la CPU.
-    Está paralelizado usando OpenMP.
+* ``cpu-map.cpp``:
+  mapeo del vector implementado en C++ para correr en la CPU.
+  Está paralelizado usando OpenMP.
 
-  * ``gpu-map.cu``:
-    mapeo del arreglo en CUDA para correr en la GPU.
-    En este archivo usted debe escribir la función
-    que reserve la memoria global,
-    cargue los datos,
-    ejecute el kernel,
-    mida el tiempo
-    y copie el resultado de vuelta.
+* ``gpu-map.cu``:
+  mapeo del arreglo en CUDA para correr en la GPU.
+  En este archivo usted debe escribir la función
+  que reserve la memoria global,
+  cargue los datos,
+  ejecute el kernel,
+  mida el tiempo
+  y copie el resultado de vuelta.
 
-  * ``gpu-map.hpp``, ``cpu-map.hpp``, ``Makefile``.
+* ``gpu-map.hpp``, ``cpu-map.hpp``, ``Makefile``.
 
-  * ``create_data_file.py``: script para crear el archivo de datos.
-    Requiere tener Python y NumPy instalados.
-    Útil por si quieren generar su propio archivo de datos.
+* ``create_data_file.py``: script para crear el archivo de datos.
+  Requiere tener Python y NumPy instalados.
+  Útil por si quieren generar su propio archivo de datos.
 
 .. _código base: apellido-nombre-t1.tgz
 
-* El programa lee los datos de un archivo llamado ``data_2^26``
-  que tiene `2^26` números ``float`` de 4 bytes cada uno.
-  El programa no necesariamente los carga todos:
-  la constante ``N`` indica cuántos de los datos serán leídos en el arreglo.
-  Pueden generar su propio archivo de datos usando el script,
-  o usar el que tengo en mi cuenta del servidor ``gp01``,
-  en ``/home/utfsm/rbonvall/data_2^26``.
+El programa lee los datos de un archivo llamado ``data_2^26``
+que tiene `2^26` números ``float`` de 4 bytes cada uno.
+El programa no necesariamente los carga todos:
+la constante ``N`` indica cuántos de los datos serán leídos en el arreglo.
+Pueden generar su propio archivo de datos usando el script,
+o usar el que tengo en mi cuenta del servidor ``gp01``,
+en ``/home/utfsm/rbonvall/data_2^26``.
 
 Qué hay que hacer
 -----------------
