@@ -1,6 +1,5 @@
 Tarea 1
 =======
-
 La tarea consiste en aplicar una función
 a todos los elementos de un arreglo.
 («mapear el arreglo»).
@@ -69,6 +68,12 @@ Qué hay que hacer
 * Hacer experimentos para estudiar cómo influye el valor de `M`
   (en otras palabras, el requerimiento de cómputo de la función `f`)
   en la performance.
+
+Para saber cómo medir el tiempo de ejecución de un kernel CUDA,
+busquen en la *CUDA C Best Practices Guide*
+en la `página de documentación de CUDA`_.
+
+.. _página de documentación de CUDA: http://developer.nvidia.com/object/cuda_3_1_downloads.html
 
 Entrega
 -------
