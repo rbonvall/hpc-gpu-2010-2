@@ -45,6 +45,6 @@ int main(int argc, char *argv[]) {
 #   pragma omp parallel reduction(+: squared_diff_norm)
     for (unsigned i = 0; i < N; ++i)
         squared_diff_norm += SQUARED(x1[i] - x2[i]);
-    std::cout << "Norm of the difference: " << std::sqrt(squared_diff_norm) << std::endl;
+    std::cout << "Norma de la diferencia: " << std::sqrt(squared_diff_norm) << std::endl;
 }
 
