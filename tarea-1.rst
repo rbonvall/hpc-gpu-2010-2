@@ -45,7 +45,7 @@ El `código base`_ contiene los siguientes archivos:
   Requiere tener Python y NumPy instalados.
   Útil por si quieren generar su propio archivo de datos.
 
-.. _código base: apellido-nombre-t1.tgz
+.. _código base: _static/apellido-nombre-t1.tgz
 
 El programa lee los datos de un archivo llamado ``data_2^26``
 que tiene `2^26` números ``float`` de 4 bytes cada uno.
