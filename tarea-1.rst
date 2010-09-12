@@ -82,6 +82,9 @@ La entega consiste en:
 
 * el código utilizado, empaquetado en un tarball llamado
   ``apellido-nombre-t1.tgz``, reemplazando con su nombre y su apellido;
+  incluya un archivo ``README`` que indique brevemente
+  qué modificaciones hizo al código original
+  (haga todas las que estime conveniente).
 
 * un informe de **máximo una página**, en el que se explique los resultados de
   los experimentos y las conclusiones sobre cómo influye cada decisión en la
