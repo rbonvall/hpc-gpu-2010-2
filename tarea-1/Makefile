@@ -2,7 +2,7 @@ NVCC = nvcc
 CC = g++
 CXXFLAGS = -Wall $(INCLUDEFLAGS) -fopenmp
 
-ifeq ($(shell hostname),gp01)
+ifeq ($(shell hostname -s),gp01)
     CUDA = /opt/cuda
 else
     # modificar a gusto
