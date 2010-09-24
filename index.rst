@@ -8,6 +8,7 @@ Computación de Alto Desempeño en GPU
    clase-septiembre-3
    clase-septiembre-10
    tarea-1
+   clase-septiembre-24
 
 Evaluaciones
 ------------
