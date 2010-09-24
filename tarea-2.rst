@@ -5,7 +5,7 @@ usando la `regla de Simpson`_:
 
 .. math::
 
-    \int_{0}^{2^20} \sum_{k = 1}^{10000} \sin(2\pi kx)\,dx,
+    \int_{0}^{2^{20}} \sum_{k = 1}^{10000} \sin(2\pi kx)\,dx,
 
 usando un intervalo de integración de largo `h = 1`.
 
