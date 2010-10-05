@@ -1,48 +1,21 @@
 Tarea 2
 =======
-La tarea consiste en aproximar la siguiente integral en la GPU
-usando la `regla de Simpson`_:
+La tarea consiste en
+estimar numéricamente
+el valor de la integral definida:
 
 .. math::
 
-    \int_{0}^{2^{20}} \sum_{k = 1}^{10000} \sin(2\pi kx)\,dx,
+    \int_0^1 e^{-x/4} \cos^2\bigl(2\pi f(x) x\bigr),
 
-usando un intervalo de integración de largo `h = 1`.
+donde:
 
-.. _regla de Simpson: http://en.wikipedia.org/wiki/Simpson's_method
+.. math::
 
-Qué hay que hacer
------------------
-* Escribir el programa que calcula la integral.
+    f(x) = 4 + \frac{8}{1 + 400(x - 0.45)^2},
 
-* Hacer experimentos para estudiar cómo influye el tamaño del bloque
-  en la performance.
+usando el `método de Simpson`_
+con `h = 10^{-6}`.
 
-* Hacer experimentos para estudiar cómo influye el tamaño del vector
-  en la performance.
-
-* Hacer experimentos para estudiar cómo influye el valor de `M`
-  (en otras palabras, el requerimiento de cómputo de la función `f`)
-  en la performance.
-
-Las referencias para programar en CUDA son la 
-*CUDA C Best Practices Guide* y la
-*CUDA*,
-que pueden ser descargadas
-en la `página de documentación de CUDA`_.
-
-.. _página de documentación de CUDA: http://developer.nvidia.com/object/cuda_3_1_downloads.html
-
-Entrega
--------
-La fecha de entrega de la tarea 2 es el **lunes 11 de octubre**.
-La entega consiste en:
-
-* el código utilizado, empaquetado en un tarball llamado
-  ``apellido-nombre-t2.tgz``, reemplazando con su nombre y su apellido.
-
-* un informe de **máximo una página**, en el que se explique los resultados de
-  los experimentos y las conclusiones sobre cómo influye cada decisión en la
-  performance, entregando tanto la evidencia empírica como la explicación
-  teórica.
+.. _método de Simpson: http://es.wikipedia.org/wiki/Regla_de_Simpson
 
