@@ -12,7 +12,7 @@ donde:
 
 .. math::
 
-    f(x) = 4 + \frac{8}{1 + 400(x - 0.45)^2},
+    f(x) = 2 + \frac{9}{1 + 600(x - 0.43)^2},
 
 usando el `método de Simpson`_
 con `h = 2^{-20}`.
