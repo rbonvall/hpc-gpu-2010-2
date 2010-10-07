@@ -31,7 +31,7 @@ int main() {
     float sum = 0.0;
     float x;
 
-//#   pragma omp parallel for private(x) reduction(+: sum)
+#   pragma omp parallel for private(x) reduction(+: sum)
     for (int i = 1; i < 2 * N; ++i) {
         x = A + i * (H / 2);
         sum += (i % 2 == 0 ? 4 : 2) * g(x);
