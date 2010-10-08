@@ -6,6 +6,11 @@ Computación de Alto Desempeño en GPU
    clase-agosto-20
    clase-agosto-27
    clase-septiembre-3
+   clase-septiembre-10
+   tarea-1
+   clase-septiembre-24
+   clase-octubre-1
+   disertaciones
 
 Evaluaciones
 ------------
