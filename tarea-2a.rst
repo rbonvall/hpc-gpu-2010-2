@@ -49,6 +49,8 @@ El `código base`_ contiene:
   y calcula el resultado de la integral usando SciPy.
 * ``Makefile``.
 
+.. _código base: #
+
 Qué hay que hacer
 -----------------
 * Escribir el programa CUDA que calcula las `M` partes de la integral
