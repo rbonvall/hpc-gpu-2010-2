@@ -21,7 +21,52 @@ y:
     k(x) = 0.5 + \frac{1.5}{1 + 50x^2},
 
 usando el `método de Simpson`_
-con `n = 2^{22}` intervalos.
+con `n = 2^{22}` subintervalos.
 
 .. _método de Simpson: http://es.wikipedia.org/wiki/Regla_de_Simpson
+
+Para la primera parte de esta tarea,
+no hay que calcular la integral completamente en la GPU.
+Lo que hay que hacer es:
+
+* dividir el dominio de integración en `M` subdominios,
+* asignar cada subdominio a un bloque de hebras,
+* hacer que las hebras calculen *en paralelo*
+  y usando memoria compartida,
+  el valor de la integral en cada subdominio,
+* poner el resultado de cada subdominio
+  en una casilla de un arreglo global.
+
+Archivos de la tarea
+--------------------
+El `código base`_ contiene:
+
+* ``integral-cpu.cpp``: implementación de referencia
+  del método de Simpson en C++, para entender el algoritmo
+  y comparar los resultados.
+* ``integral.cu``: esqueleto del programa en CUDA.
+* ``plot.py``: script que grafica la función a integrar
+  y calcula el resultado de la integral usando SciPy.
+* ``Makefile``.
+
+Qué hay que hacer
+-----------------
+* Escribir el programa CUDA que calcula las `M` partes de la integral
+  y las guarda en un arreglo global.
+* Medir cómo influye el tamaño del bloque
+  en el tiempo de ejecución del programa.
+
+Entrega
+-------
+La fecha de entrega de la tarea 2a es el **lunes 18 de octubre**.
+La entrega consiste en:
+
+* el código utilizado, empaquetado en un tarball llamado
+  ``apellido-nombre-t2a.tgz``, reemplazando con su nombre y su apellido;
+  incluya un archivo ``README`` que indique brevemente
+  cómo ejecutar su programa
+  y qué modificaciones hizo al código original
+  (haga todas las que estime conveniente).
+
+* un informe de **máximo una página** con los resultados de los experimentos.
 
