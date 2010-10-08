@@ -5,9 +5,11 @@ Disertaciones
 
 * Gonzalo Vallejos:
   *Efficient simulation of large-scale Spiking Neural Networks
-  using CUDA graphics processors*. (8 de octubre).
-* Cristián Maureira: *Parallel Genetic Algorithms on Programmable Graphics Hardware*.
-* Gabriel Zamora: *Regular Expression Matching on Graphics Hardware for Intrusion Detection*.
+  using CUDA graphics processors*. (15 de octubre).
+* Cristián Maureira: *Parallel Genetic Algorithms on Programmable Graphics
+  Hardware* (15 de octubre).
+* Gabriel Zamora: *Regular Expression Matching on Graphics Hardware for
+  Intrusion Detection*.
 
 El tiempo esperado para cada disertación es de media hora,
 incluyendo preguntas y discusión.
