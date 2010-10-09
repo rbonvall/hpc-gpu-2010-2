@@ -5,7 +5,7 @@
 #define SQ(x) ((x) * (x))
 
 static const float A = -4.0, B = 4.0;  // limites de integración
-static const int N = 1 << 22;          // número de intervalos = 2^20
+static const int N = 1 << 22;          // número de intervalos = 2^22
 static const float H = (B - A) / N;    // tamaño del intervalo de integración
 static const float PI(M_PI);           // π con precision simple
 
