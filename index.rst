@@ -12,6 +12,7 @@ Computación de Alto Desempeño en GPU
    clase-octubre-1
    disertaciones
    tarea-2a
+   trabajos-cluster
 
 Evaluaciones
 ------------
