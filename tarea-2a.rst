@@ -49,7 +49,7 @@ El `código base`_ contiene:
   y calcula el resultado de la integral usando SciPy.
 * ``Makefile``.
 
-.. _código base: #
+.. _código base: _static/apellido-nombre-t2a.tgz
 
 Qué hay que hacer
 -----------------
