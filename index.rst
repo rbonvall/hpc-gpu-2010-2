@@ -13,6 +13,7 @@ Computación de Alto Desempeño en GPU
    disertaciones
    tarea-2a
    trabajos-cluster
+   tarea-2b
 
 Evaluaciones
 ------------
