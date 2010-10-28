@@ -15,6 +15,8 @@ DEPLOYDIR = $(HOME)/public_html/hpc-gpu-2010-2
 
 .PHONY: help clean html dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest deploy
 
+all: html
+
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "  html      to make standalone HTML files"
