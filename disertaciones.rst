@@ -10,6 +10,8 @@ Disertaciones
   Hardware* (15 de octubre).
 * Gabriel Zamora: *Regular Expression Matching on Graphics Hardware for
   Intrusion Detection*.
+* Ignacio Villacura: *An Adaptive Game Loop Architecture with Automatic
+  Distribution of Tasks between CPU and GPU*.
 
 El tiempo esperado para cada disertación es de media hora,
 incluyendo preguntas y discusión.
